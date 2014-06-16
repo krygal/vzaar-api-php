@@ -6,7 +6,7 @@
 
 require_once 'VzaarException.php';
 
-class User
+class VzaarUser
 {
     var $version;
     var $authorName;
@@ -27,7 +27,7 @@ class User
         if ($jo == NULL) {
             throw new VzaarException('Object not found');
         } else {
-            $user = new User();
+            $user = new VzaarUser();
 
             $user->authorName = $jo->author_url;
             $user->playCount = $jo->play_count;
