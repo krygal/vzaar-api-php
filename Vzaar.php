@@ -123,7 +123,7 @@ class Vzaar
         $req = new HttpRequest($_url . 'api/' . $account . '.json');
         $req->verbose = Vzaar::$enableHttpVerbose;
 
-        return User::fromJson($req->send());
+        return VzaarUser::fromJson($req->send());
     }
 
     /**
